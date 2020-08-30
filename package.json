@@ -1,0 +1,14 @@
+{
+  "name": "mlbmenu",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "John Verity",
+  "devDependencies": {
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  }
+  "scripts": {
+    "dev": "webpack --watch --mode development",
+    "prod": "webpack --mode production"
+  },
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>MLB Games</title>
+
+		<style>
+			body {
+				margin: 0;
+				padding: 0;
+			}
+			#canvas, #gl-canvas {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+			}
+
+			#gl-canvas {
+				background-image: url("http://mlb.mlb.com/mlb/images/devices/ballpark/1920x1080/1.jpg");
+			}
+		</style>
+	</head>
+
+	<body>
+		<canvas id="gl-canvas"></canvas>
+		<canvas id="canvas"></canvas>
+
+		<script type="application/javascript" src="/dist/index.bundle.js"></script>
+	</body>
+</html>
