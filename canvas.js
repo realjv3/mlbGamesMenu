@@ -28,9 +28,9 @@ export default function renderGameText(games, selGame, selPositions) {
 	var pixelX = Math.floor((selPositions[0] *  0.5 + 0.5) * canvas.width) + 62;
 	var pixelY = Math.floor((selPositions[1] * -0.5 + 0.5) * canvas.height) - 10;
 
-	ctx.font = "10px Arial";
+	ctx.font = "11px Arial";
 	ctx.fillText(headline, pixelX, pixelY);
-	ctx.font = "8px Arial";
+	ctx.font = "9px Arial";
 	ctx.fillText(dateTime, pixelX, pixelY + 100);
 	ctx.fillText(awayRecord, pixelX, pixelY + 110);
 	ctx.fillText(homeRecord, pixelX, pixelY + 120);

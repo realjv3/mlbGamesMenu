@@ -22,8 +22,6 @@ window.onload = () => {
 				break;
 			case 'ArrowRight':
 				selGame = selGame !== mlbGames.length - 1 ? selGame + 1 : mlbGames.length - 1;
-				break;
-			case 'Enter':
 		}
 
 		if (['ArrowLeft', 'ArrowRight', 'Enter'].includes(e.key)) {

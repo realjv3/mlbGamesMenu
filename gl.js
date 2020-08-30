@@ -93,7 +93,7 @@ function bufferMenuItems(itemsLength = 0, selGame = 0, offset = 0) {
 		selHeight = height * 1.2,
 		selWidth = width * 1.2;
 	let
-		topLeft = [-0.93, 0.11],
+		topLeft = [-0.92, 0.11],
 		positions = [],
 		selPositions = [];
 
