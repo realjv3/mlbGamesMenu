@@ -1,13 +1,26 @@
 const path = require('path');
 
-module.exports = {
-	mode: 'development',
-	entry: {
-		index: './index.js',
+const
+	devOptions = {
+		mode: 'development',
+		devtool: 'inline-source-map',
 	},
-	devtool: 'inline-source-map',
-	output: {
-		filename: '[name].bundle.js',
-		path: path.resolve(__dirname, 'dist'),
+	prodOptions = {
+		mode: 'production',
 	},
+	commonOptions = {
+		entry: {
+			index: './index.js',
+		},
+		output: {
+			filename: '[name].bundle.js',
+				path: path.resolve(__dirname, 'dist'),
+		},
+	};
+
+module.exports = env => {
+
+	const config = env.NODE_ENV === 'production' ? prodOptions : devOptions;
+
+	return {...commonOptions, ...config};
 };
