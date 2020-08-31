@@ -3,31 +3,31 @@ import {getGames} from "./games";
 import renderGameText from "./canvas";
 
 window.onload = () => {
-	let
-		mlbGames = [],
-		selGame = 0,
-		selPositions = [];
+    let
+        mlbGames = [],
+        selGame = 0,
+        selPositions = [];
 
-	getGames()
-		.then(games => {
-			mlbGames = games.dates[0].games;
-			selPositions = renderGL(mlbGames);
-			renderGameText(mlbGames, selGame, selPositions);
-		});
+    getGames()
+        .then(games => {
+            mlbGames = games.dates[0].games;
+            selPositions = renderGL(mlbGames);
+            renderGameText(mlbGames, selGame, selPositions);
+        });
 
-	document.body.onkeydown = e => {
-		switch (e.key) {
-			case 'ArrowLeft':
-				selGame = selGame > 0 ? selGame - 1 : 0;
-				break;
-			case 'ArrowRight':
-				selGame = selGame !== mlbGames.length - 1 ? selGame + 1 : mlbGames.length - 1;
-		}
+    document.body.onkeydown = e => {
+        switch (e.key) {
+            case 'ArrowLeft':
+                selGame = selGame > 0 ? selGame - 1 : 0;
+                break;
+            case 'ArrowRight':
+                selGame = selGame !== mlbGames.length - 1 ? selGame + 1 : mlbGames.length - 1;
+        }
 
-		if (['ArrowLeft', 'ArrowRight', 'Enter'].includes(e.key)) {
+        if (['ArrowLeft', 'ArrowRight', 'Enter'].includes(e.key)) {
 
-			selPositions = renderGL(mlbGames, selGame);
-			renderGameText(mlbGames, selGame, selPositions);
-		}
-	}
+            selPositions = renderGL(mlbGames, selGame);
+            renderGameText(mlbGames, selGame, selPositions);
+        }
+    }
 };
