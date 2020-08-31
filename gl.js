@@ -3,12 +3,12 @@ const glData = initGL();
 /**
  *
  * @return {
- * 	{
+ * {
  * 		gl: WebGLRenderingContext,
  * 		glProgram: WebGLProgram,
  * 		uniformLocations: {colorUniform: WebGLUniformLocation},
  * 		attrLocations: {vertexPosition: GLint}
- * 	}
+ * }
  * }
  */
 function initGL() {
