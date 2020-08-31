@@ -1,5 +1,16 @@
 const glData = initGL();
 
+/**
+ *
+ * @return {
+ * 	{
+ * 		gl: WebGLRenderingContext,
+ * 		glProgram: WebGLProgram,
+ * 		uniformLocations: {colorUniform: WebGLUniformLocation},
+ * 		attrLocations: {vertexPosition: GLint}
+ * 	}
+ * }
+ */
 function initGL() {
 	const
 		canvas = document.getElementById('gl-canvas'),
@@ -82,7 +93,7 @@ function initGL() {
  * @param {number} selGame
  * @param {number} offset
  *
- * @return {Array.<Object>} selRectPositions
+ * @return {Array.<Array.<number>>}
  */
 function bufferMenuItems(itemsLength = 0, selGame = 0, offset = 0) {
 
@@ -131,7 +142,7 @@ function bufferMenuItems(itemsLength = 0, selGame = 0, offset = 0) {
 }
 
 /**
- * Buffers positioins for lines to be drawn inside of selected menu item
+ * Buffers positions for lines to be drawn inside of selected menu item
  *
  * @param {Array} selPositions
  */
